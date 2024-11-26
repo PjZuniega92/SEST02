@@ -3,49 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Activity #1</title>
-
-    <style>
-      ul {
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-      }
-      div {
-        margin: 0 auto;
-      }
-    </style>
   </head>
   <body>
-    <div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="food.html">Food</a></li>
-        <li><a href="movie.html">Movie</a></li>
-        <li><a href="#">Contact Me</a></li>
-      </ul>
+    <div class="page-container">
+      <nav class="nav-menu-container">
+        <ul>
+          <li class="menu-item"><a href="index.html">Home</a></li>
+          <li class="menu-item"><a href="experience.html">Experience</a></li>
+          <li class="menu-item"><a href="food.html">Food</a></li>
+          <li class="menu-item"><a href="movie.html">Movie</a></li>
+          <li class="menu-item"><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </nav>
 
-      <img src="images/Pj.jpg" alt="Pj's Selfie" width="300" height="auto" />
-      <br />
-
-      <p>
-        <strong>Bio:</strong> Hi, I'm Pj. <br />
-        I love learning new skills and enhancing them. <br />
-        I'm a bit workaholic, but if I'm going to have a lot of time, I would
-        choose to travel and explore. <br /><br /><br />
-        My main goal is to be a good professional full stack web developer.
-      </p>
-
-      <h4>Personal Information</h4>
-      <p><strong>Full Name:</strong> Pj Z.</p>
-      <p><strong>Birthdate:</strong> November 10</p>
-      <p><strong>Birth Place:</strong> Paranaque City</p>
-      <p>
-        <strong>Hobbies:</strong> Playing online games, watching movies, and
-        reading books
-      </p>
+      <div class="page-content-container">
+        <section class="row-1">
+          <div class="row-1-wrapper col-2">
+            <div class="first-col">
+              <img
+                src="images/Pj.jpg"
+                alt="Pj's Selfie"
+                width="300"
+                height="auto"
+              />
+              <p>
+                <strong>Bio:</strong> Hi, I'm Pj. <br />
+                I love learning new skills and enhancing them. <br />
+                I'm a bit workaholic, but if I'm going to have a lot of time, I
+                would choose to travel and explore. <br /><br />
+                My main goal is to be a good professional full stack web
+                developer.
+              </p>
+            </div>
+            <div class="second-col">
+              <h1>Personal Information</h1>
+              <p><strong>Full Name:</strong> <span>Pj Z.</span></p>
+              <p><strong>Birthdate:</strong> <span>November 10</span></p>
+              <p><strong>Birth Place:</strong> <span>Paranaque City</span></p>
+              <p>
+                <strong>Hobbies:</strong> Playing online games, watching movies,
+                and reading books
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   </body>
 </html>
