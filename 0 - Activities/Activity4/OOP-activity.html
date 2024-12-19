@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity - OOP</title>
+  </head>
+  <body>
+    <h2>Activity 4</h2>
+    <script>
+      // Define the Person class
+      class Person {
+        constructor(name, age, occupation, hobbies, address) {
+          this.name = name;
+          this.age = age;
+          this.occupation = occupation;
+          this.hobbies = hobbies;
+          this.address = address;
+        }
+
+        // Method to introduce the person
+        introduce() {
+          console.log(
+            `Hi, my name is ${this.name}. I am ${
+              this.age
+            } years old, work as a ${
+              this.occupation
+            }, and enjoy ${this.hobbies.join(", ")}.`
+          );
+        }
+
+        // Method to increment the age by 1
+        getOlder() {
+          this.age += 1;
+          console.log(`${this.name} is now ${this.age} years old.`);
+        }
+
+        // Method to change the occupation
+        changeOccupation(newOccupation) {
+          this.occupation = newOccupation;
+          console.log(`${this.name} is now working as a ${this.occupation}.`);
+        }
+
+        // Method to add a new hobby
+        addHobby(newHobby) {
+          this.hobbies.push(newHobby);
+          console.log(`${this.name} has picked up a new hobby: ${newHobby}.`);
+        }
+
+        // Method to update the address
+        move(newAddress) {
+          this.address = newAddress;
+          console.log(
+            `${this.name} has moved to ${newAddress.street}, ${newAddress.city}, ${newAddress.state}, ${newAddress.zipCode}.`
+          );
+        }
+      }
+
+      // Create 3 Person objects
+      const person1 = new Person(
+        "Alice",
+        30,
+        "Software Developer",
+        ["reading", "hiking"],
+        {
+          street: "123 Maple St",
+          city: "Seattle",
+          state: "WA",
+          zipCode: "98101",
+        }
+      );
+
+      const person2 = new Person(
+        "Bob",
+        25,
+        "Graphic Designer",
+        ["painting", "cycling"],
+        {
+          street: "456 Elm St",
+          city: "Portland",
+          state: "OR",
+          zipCode: "97203",
+        }
+      );
+
+      const person3 = new Person(
+        "Charlie",
+        35,
+        "Chef",
+        ["cooking", "gardening"],
+        {
+          street: "789 Oak St",
+          city: "San Francisco",
+          state: "CA",
+          zipCode: "94107",
+        }
+      );
+
+      // Test the methods
+      person1.introduce();
+      person1.getOlder();
+      person1.changeOccupation("Product Manager");
+      person1.addHobby("traveling");
+      person1.move({
+        street: "456 Pine St",
+        city: "Redmond",
+        state: "WA",
+        zipCode: "98052",
+      });
+
+      person2.introduce();
+      person2.getOlder();
+      person2.changeOccupation("UI/UX Designer");
+      person2.addHobby("photography");
+      person2.move({
+        street: "789 Cedar St",
+        city: "Eugene",
+        state: "OR",
+        zipCode: "97401",
+      });
+
+      person3.introduce();
+      person3.getOlder();
+      person3.changeOccupation("Pastry Chef");
+      person3.addHobby("baking");
+      person3.move({
+        street: "101 Spruce St",
+        city: "Oakland",
+        state: "CA",
+        zipCode: "94607",
+      });
+    </script>
+  </body>
+</html>
